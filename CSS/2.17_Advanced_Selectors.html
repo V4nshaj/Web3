@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Webpage With Style</title>
+
+    <style>
+        h1 {
+
+            color: red;
+        }
+
+        .green {
+            color: green;
+
+        }
+
+        #blue {
+
+            font-size: 10px;
+        }
+
+        div p {
+            /*all paragraph inside div*/
+
+            font-weight: bold;
+        }
+
+        h3~p {
+            /*selects all <p> (paragraph) elements that are following an <h3> 
+            <p> elements are siblings of the <h3> and come after it in the code, so they would be selected by h3 ~ p. */
+
+            text-decoration: underline;
+        }
+
+        h3+P {
+            /* Only first paragraph is bigger rest are same after h3 */
+            font-size: 150%;
+        }
+
+        a[target] {
+            /* Selects all links with target */
+            color: yellow;
+        }
+
+        a[href*="google.com"] {
+            /* href*=google.com mens the string needs to be there in href to select the element */
+
+            font-size: 150%;
+        }
+    </style>
+
+</head>
+
+<!-- 
+
+        ^= - begin with
+        $= - ends with
+        ~= - has the value between two spaces
+        |= - has the value seperated by hythens (-)
+    -->
+
+<body>
+
+    <h1>I a a heading</h1>
+
+    <div>
+
+        <h3>I'm an h3 element</h3>
+        <p>Just check</p>
+        <p class="green">I am a paragraph.</p>
+
+        <p>I am inside the div.</p>
+
+        <a id="blue" target="_blank">I am a link</a>
+
+    </div>
+
+    <div>
+
+        <h3>Hello!</h3>
+        <p>I'm another div</p>
+
+    </div>
+
+    <p>I am outside the div</p>
+
+    <a href="https://google.com">I'm another link</a>
+</body>
+
+</html>
