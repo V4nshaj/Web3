@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Webpage With Style</title>
+
+    <style>
+        #box {
+
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 10px;
+            transition: 1s ease-in-out;
+            /*there are diff types linear, ease-in, rotate check others*/
+            /*work in 1 seconduncreasaing the time slows the transition*/
+            font-family: "arial";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 200%;
+
+        }
+
+        #box:hover {
+
+            /* transform: translate(50px, 50px); this pushes the box 50px down and 50px right
+
+                transform: rotate(40deg); rotates 40 deg when hovered
+
+            transform: scale(2, 4); zooms in and out
+
+            transform: skew(20deg, 30deg); increaases side ways
+            */
+            transform: rotateZ(180deg);
+            /*rotates from an angle*/
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div id="box">Box</div>
+
+</body>
+
+</html>
