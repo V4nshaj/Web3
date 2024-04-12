@@ -1,0 +1,27 @@
+/* Style the header element */
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style the top navigation bar */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    /* Add a bottom border */
+    padding: 10px 20px;
+}
+
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav li {
+    display: inline-block;
+    margin-right: 20
+}

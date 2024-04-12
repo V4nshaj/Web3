@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    /* Remove default browser margins */
+    padding: 0;
+    /* Remove default browser padding */
+}
+
+.heading {
+    text-align: center;
+    background-color: rgb(51, 14, 86);
+    padding: 3px 3px;
+}
+
+ul {
+    display: inline-flex;
+    /*displays in single line*/
+    list-style-type: none;
+    /*removes default bullets*/
+
+}
+
+li {
+    display: inline-block;
+    /* Display list items inline for spacing */
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    /* Remove underlines from links */
+    color: white;
+    /* Set link color (optional) */
+}
+
+a:hover {
+    color: rgb(17, 241, 241);
+    /* Change link color on hover (optional) */
+}
+
+.hero {
+    background-color: blueviolet;
+    margin: 0;
+}
+
+#container {
+
+    text-align: center;
+    /* Center text and image container horizontally */
+    margin-bottom: 10;
+
+}
+
+#container img {
+    margin-top: 5%;
+    overflow: hidden;
+    width: 440px;
+    /* Stretch image to fill the container */
+    height: 440px;
+    /* Stretch image to fill the container */
+    object-fit: cover;
+    /* Crop image if necessary to fit the circle */
+    margin-bottom: 10px;
+    /* Add space between image and text*/
+    border-radius: 50%;
+    /* Make the div a circle */
+}
+
+#container p {
+    margin: 0;
+    /* Remove default margin for better alignment */
+}
+
+.about {
+    margin: 0;
+}

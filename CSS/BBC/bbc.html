@@ -1,0 +1,511 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>Document</title>
+    <link href="normalize.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            /* background-color: black; */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #topbar {
+            width: 1200px;
+            margin: 0 auto;
+            height: 40px;
+        }
+
+        #logo {
+            margin: 8px 8px 0 8px;
+            width: 100px;
+            float: left;
+        }
+
+        #signin-div {
+
+            margin-right: 50px;
+        }
+
+        #signin-icon {
+            margin: 8px 8px;
+            font-size: 30px;
+            float: left;
+        }
+
+        .top-text {
+            font-weight: bold;
+            font-size: 90%;
+            position: relative;
+            top: 11px;
+        }
+
+        #topbar>div {
+
+            float: left;
+            /* padding-left: 10px; */
+            padding: 0 15px 0 15px;
+            /* margin: 0 15px; */
+            /* margin-right: 10px; */
+            border-left: 1px #CCCCCC solid;
+            height: 100%;
+        }
+
+        #bell-icon {
+            margin: 8px;
+            font-size: 25px;
+            float: left;
+            color: #CCCCCC;
+        }
+
+        #more-section {
+            padding-right: 20px;
+        }
+
+        #more-arrow {
+            position: absolute;
+            top: 10px;
+        }
+
+        .fa-search {
+            position: absolute;
+            /* Position the icon absolutely */
+            top: 50%;
+            transform: translateY(-50%);
+            /* Center the icon vertically */
+            right: 10px;
+            /* Position the icon 10px from the right edge */
+            color: black;
+            /* Adjust the icon color as needed */
+        }
+
+        form {
+
+            float: left;
+            margin: 5px;
+            position: relative;
+        }
+
+        input[type="text"] {
+
+            padding: 5px 10px 5px 5px;
+            color: black;
+            background-color: #CCCCCC;
+            border: none;
+            /* Add space for the icon on the right */
+        }
+
+        #search-section input[type="text"]::placeholder {
+            color: #000;
+            /* Black placeholder color */
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        #menubar-container {
+            background-color: #BB1919;
+            width: 100%;
+            height: 70px;
+        }
+
+        #menubar {
+            width: 1150px;
+            margin: 0 auto;
+        }
+
+        #menubar h1 {
+            padding: 0;
+            margin: 4px;
+            color: white;
+            font-size: 40px;
+            font-weight: normal;
+            padding-top: 10px;
+            float: left;
+        }
+
+
+        #local-news {
+            margin: 12px 250px;
+            float: right;
+            border: 1px #a27d7d solid;
+            width: 250px;
+            padding: 5px 5px 5px 10px;
+
+        }
+
+        #local-news a {
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        #local-news a:hover {
+            text-decoration: underline;
+        }
+
+        #map-icon {
+            font-size: 30px;
+            float: right;
+            color: white;
+        }
+
+        #subbar-container {
+            background-color: #A91717;
+            width: 100%;
+        }
+
+        #sub-bar {
+            width: 1100px;
+            margin: 0 auto;
+            height: 30px;
+        }
+
+        #sub-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 0 10px;
+            border-right: 1px solid #BB4545;
+            font-size: 16px;
+            position: relative;
+            top: 8px;
+        }
+
+        #sub-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .no-border {
+            border: none !important;
+            /*!important here does that previously border is aapplied to give importaaance to no border it is used*/
+        }
+
+        #page-container {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        #main-article h2 {
+            font-weight: normal;
+            font-size: 20px;
+            border-bottom: 4px solid #A91717;
+            width: 105px;
+        }
+
+        h3 a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 30px;
+            color: #000;
+        }
+
+        h3 a:hover {
+            color: #1167a8;
+        }
+
+        #article-summary {
+            color: #5a5a5a;
+            width: 250px;
+            float: left;
+
+        }
+
+        .topic-link {
+            text-decoration: none;
+            color: #A91717;
+            border-left: 1px solid #CCCCCC;
+            padding-left: 10px;
+        }
+
+        #article-summary a:hover {
+            color: #1167a8;
+        }
+
+        .date {
+            padding-right: 10px;
+            color: #5a5a5a;
+        }
+
+        #article-container {
+            float: left;
+            width: 690px;
+            border-right: 1px solid #CCCCCC;
+            padding-right: 10px;
+        }
+
+        #main-article-image {
+            width: 400px;
+            margin-left: 20px;
+        }
+
+        #article-hr {
+            border-top: 1px solid #A91717;
+            width: 50px;
+        }
+
+        .article-link {
+            color: #000;
+            text-decoration: none;
+        }
+
+        #watch-listen {
+            margin-left: 20px;
+            width: 290px;
+            float: right;
+        }
+
+        h4 {
+            font-weight: normal;
+            font-size: 20px;
+        }
+
+        .article-side-image {
+            float: left;
+            width: 90px;
+            margin-right: 10px;
+        }
+
+        .image-with {
+            position: relative;
+            /* Make the image-with-sound element relative for positioning */
+        }
+
+
+
+        .image-with i {
+            position: absolute;
+            /* Position the icon absolutely within the image container */
+            padding: 2px 2px 2px 5px;
+            top: 43px;
+            transform: translateY(-50%);
+            /* Center the icon vertically */
+            right: 270px;
+            font-size: 17px;
+            /* Optional: Adjust icon size */
+            background-color: white;
+        }
+
+        .time-display {
+            position: absolute;
+            /* Position the icon absolutely within the image container */
+            padding: 3px 5px 2px 5px;
+            top: 41px;
+            transform: translateY(-50%);
+            /* Center the icon vertically */
+            right: 237px;
+            font-size: 12px;
+            /* Optional: Adjust icon size */
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+
+        .watch-listen-link {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .watch-listen-link:hover {
+            color: #1167a8;
+        }
+
+        .side-article {
+            float: right;
+            width: 180px;
+            position: relative;
+            top: -18px;
+        }
+
+        .no-border {
+            border-left: none;
+            padding: 0;
+        }
+
+        .border-right {
+            border-right: 1px solid #CCCCCC;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div id="topbar">
+        <img id="logo" src="images/bbc-logo.png" alt="BBC">
+        <div id="signin-div">
+            <i id="signin-icon" class='fa fa-user-circle'></i>
+            <span class="top-text">Sign In</span>
+        </div>
+        <div id="bell-div" class="bell-section">
+            <i id="bell-icon" class='fa fa-bell'></i>
+        </div>
+        <div>
+            <span class="top-text">News</span>
+        </div>
+        <div>
+            <span class="top-text">Sport</span>
+        </div>
+        <div>
+            <span class="top-text">Weather</span>
+        </div>
+        <div>
+            <span class="top-text">iPlayer</span>
+        </div>
+        <div>
+            <span class="top-text">TV</span>
+        </div>
+        <div>
+            <span class="top-text">Radio</span>
+        </div>
+        <div>
+            <span id="more-section" class="top-text">More</span> <i id="more-arrow" class="fa fa-caret-down"></i>
+        </div>
+        <div id="search-section">
+            <form>
+                <input type="text" name="search" placeholder="Search"> <i class="fa fa-search"></i>
+            </form>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <!-- n CSS, clear: both; is a property used to ensure that an element is placed below any floated elements that come before it in the HTML markup.
+
+When an element is floated (using float: left; or float: right;), it is taken out of the normal document flow, which means other elements may flow around it. If you want to ensure that an element appears below any floated elements, you can use the clear property.
+
+Here's how clear: both; works:
+
+clear: left;: The element will be moved down below any floating elements on the left side.
+clear: right;: The element will be moved down below any floating elements on the right side.
+clear: both;: The element will be moved down below any floating elements on both sides.
+For example, if you have two floated elements (one floated left and the other floated right), and you want a third element to appear below both of them, you can apply clear: both; to the third element. -->
+
+    <div id="menubar-container">
+        <div id="menubar">
+            <h1>NEWS</h1>
+        </div>
+        <div id="local-news">
+            <a href="#local-news">Find local news <i id="map-icon" class="fa fa-map-marker"></i></a>
+        </div>
+
+    </div>
+
+    <div class="clear"></div>
+    <div id="subbar-container">
+        <div id="sub-bar">
+            <a href="#home">Home</a>
+            <a href="#UK">UK</a>
+            <a href="#world">World</a>
+            <a href="#business">Business</a>
+            <a href="#Politics">Politics</a>
+            <a href="#tech">Tech</a>
+            <a href="#Science">Science</a>
+            <a href="#Health">Health</a>
+            <a href="#Education">Education</a>
+            <a href="#Arts">Entertainment & Arts</a>
+            <a href="#Video">Video & Audio</a>
+            <a href="#More" class="no-border">More <i id="arrow" class="fa fa-caret-down"></i></a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="page-container">
+        <div id="main-article">
+            <h2>Technology</h2>
+            <div id="article-container">
+                <h3><a href="">Asda bug exposed payment details</a></h3>
+                <div id="article-summary">
+                    <p>Security vulnerabilities that put customers at risk have affected Asda's website for a couple of
+                        years, a security expert has revealed.
+                    </p>
+                    <p><i class="fa fa-clock-o"></i> <span class="date">19 January 2016</span><a class="topic-link"
+                            href="#technology">Technology</a></p>
+                    <hr id="article-hr" align="left">
+                    <p><a class="article-link" href="">Surveillance firm hit in hack attack</a></p>
+                    <p><a class="article-link" href=""> eBay flaw has existed for months</a></p>
+                </div>
+                <img id="main-article-image" src="images/main-article-image.png">
+            </div>
+        </div>
+        <!-- <div class="clear"></div> -->
+        <div id="watch-listen">
+            <h4>Watch/Listen</h4>
+            <div class="image-with">
+                <img class="article-side-image" src="images/article1.jpg" alt="">
+                <i class="fa fa-volume-up"></i>
+            </div>
+            <div class="side-article">
+                <p><a class="watch-listen-link" href="">UK science chief backs blockchains</a></p>
+                <p><i class="fa fa-clock-o"></i> <span class="date">1 hour ago</span></p>
+
+            </div>
+            <div class="clear"></div>
+            <div class="image-with">
+                <img class="article-side-image" src="images/article2.jpg" alt="">
+                <i class="fa fa-play"></i>
+                <span class="time-display">1:24</span>
+            </div>
+            <div class="side-article">
+                <p><a class="watch-listen-link" href="">Drone register gives 'accountability'</a></p>
+                <p><i class="fa fa-clock-o"></i> <span class="date border-right">18 January 2016</span><br><a
+                        class="topic-link no-border" href="#technology">Technology</a></p>
+            </div>
+            <div class="clear"></div>
+            <div class="image-with">
+                <img class="article-side-image" src="images/article3.jpg" alt="">
+                <i class="fa fa-play"></i>
+                <span class="time-display">0:24</span>
+            </div>
+            <div class="side-article">
+                <p><a class="watch-listen-link" href="">SpaceX rocket explodes during landing</a></p>
+                <p><i class="fa fa-clock-o"></i> <span class="date border-right">18 January 2016</span><br><a
+                        class="topic-link no-border" href="#Science">Science & Environment</a></p>
+            </div>
+            <div class="clear"></div>
+            <div class="image-with">
+                <img class="article-side-image" src="images/article4.jpg" alt="">
+                <i class="fa fa-play"></i>
+                <span class="time-display">0:57</span>
+            </div>
+            <div class="side-article">
+                <p><a class="watch-listen-link" href="">Drone register gives 'accountability'</a></p>
+                <p><i class="fa fa-clock-o"></i> <span class="date border-right">19 January 2016</span><br><a
+                        class="topic-link no-border" href="#technology">Technology</a></p>
+            </div>
+            <div class="clear"></div>
+            <div class="image-with">
+                <img class="article-side-image" src="images/article5.jpg" alt="">
+                <i class="fa fa-play"></i>
+                <span class="time-display">1:03</span>
+            </div>
+            <div class="side-article">
+                <p><a class="watch-listen-link" href="">Drone register gives 'accountability'</a></p>
+                <p><i class="fa fa-clock-o"></i> <span class="date border-right">19 January 2016</span><br><a
+                        class="topic-link no-border" href="#technology">Technology</a></p>
+            </div>
+            <div class="clear"></div>
+            <div class="image-with">
+                <img class="article-side-image" src="images/article6.jpg" alt="">
+                <i class="fa fa-play"></i>
+                <span class="time-display">1:33</span>
+            </div>
+            <div class="side-article">
+                <p><a class="watch-listen-link" href="">Drone register gives 'accountability'</a></p>
+                <p><i class="fa fa-clock-o"></i> <span class="date border-right">19 January 2016</span><br><a
+                        class="topic-link no-border" href="#technology">Technology</a></p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
