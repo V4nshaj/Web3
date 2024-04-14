@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var myArray = new Array();
+        myArray[0] = 'Pizza';
+        myArray[1] = 'Chocolate';
+        var tweets = ["Morning everybody!", "I love coffee!"];
+        alert(myArray[0]);
+        for (var i = 0; i < 2; i++) {
+            console.log(myArray[i]);//prints in terminal
+            alert(myArray[i]);
+        }
+        alert(tweets[0]);
+        for (var i = 0; i < 2; i++) {
+            alert(tweets[i]);
+            console.log(tweets[i]);
+        }
+        tweets.push("Back to Work");
+        // var org_tweets = tweets;//storing value like will have effect on org_tweets when tweets is modified for eg using splice
+        // var org_tweets = tweets.slice(); // Create a copy of tweets array does not modify
+        var org_tweets = [...tweets]; // Create a copy of tweets array does not modify
+        // above two does the same thing
+        console.log(org_tweets);
+        alert(tweets[2]);
+        console.log(tweets);
+        var two_items = tweets.splice(1, 1);
+        console.log(two_items);//splice(x,y) x is the starting point of the item and y is the no. of items need to be deleted from that
+        tweets = org_tweets;
+        console.log(tweets);
+        console.log(tweets.splice(1, 2));
+        console.log(tweets);
+        tweets.splice(1, 0, "Cornflakes for Breakfast", "Num Num");
+        tweets.splice(1, 1, "How are you");//delestes pos 1 & replaces
+    </script>
+</body>
+
+</html>
