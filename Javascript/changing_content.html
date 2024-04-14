@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <p id="text">Hello World!</p>
+    <button id="myButton">Change Text</button>
+    <p id="sec-para">Javascript is...</p>
+    <button id="secButton">Change Text</button>
+    <div>
+        <button id="addButton">Add Text</button>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById('myButton').onclick = function () {//creates the button function to switch the text
+            document.getElementById("text").innerHTML == "Hello World!" ? document.getElementById("text").innerHTML = "Hello Vanshaj" : document.getElementById("text").innerHTML = "Hello World!";
+        }
+        document.getElementById('secButton').onclick = function () {
+            var secPara = document.getElementById('sec-para');
+            var currentText = secPara.innerHTML;//stores current text
+            // Check if the text already contains "I think" and "awesome"
+            if (!currentText.includes("I think") && !currentText.includes("awesome")) {
+                secPara.innerHTML = "I think " + currentText + " awesome!";
+            }
+        }
+        document.getElementById('addButton').onclick = function () {
+            var newPara = document.createElement('p');
+            var newPara1 = document.createElement('p');
+            newPara.textContent = 'Hi! I am Vanshaj';
+            newPara1.textContent = 'Hi! I am John';
+            // document.body.append(newPara) if parent node not created and wants to append then use append
+            document.body.appendChild(newPara);// Append the newPara to the end of the document body
+            // Clone the newPara to insert it before the addButton
+            var clonePara = newPara.cloneNode(true);
+            //The cloneNode() method is used to create a duplicate of a node in the DOM (Document Object Model). It allows you to create a copy of a specific node, along with all of its descendants (child nodes)
+            //cloneNode() is used to create a deep copy of the newly created paragraph element (newPara). 
+            // Get the parent element of the addButton
+            var parentDiv = document.getElementById('addButton').parentNode;
+            // Insert the newPara before the addButton cloneNode(true) ensures that not only the paragraph element itself but also its content and attributes are duplicated, allowing you to insert an independent copy of the paragraph element
+            // parentDiv.insertBefore(newPara1, document.getElementById('addButton'));
+            parentDiv.insertBefore(clonePara, document.getElementById('addButton'));
+        }
+
+    </script>
+</body>
+
+</html>
