@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        .circle {
+            float: left;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            margin: 50px;
+        }
+
+        #circle1 {
+            background-color: red;
+        }
+
+        #circle2 {
+            background-color: yellow;
+        }
+
+        #circle3 {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="circle1" class="circle"></div>
+    <div id="circle2" class="circle"></div>
+    <div id="circle3" class="circle"></div>
+    <script type="text/javascript">
+        document.getElementById('circle1').onclick = function () {//removes the circle when clicked on resp circle
+            document.getElementById('circle1').remove();
+        }
+        document.getElementById('circle2').onclick = function () {
+            document.getElementById('circle2').style.display = "none";
+        }
+        document.getElementById('circle3').onclick = function () {
+            document.getElementById('circle3').style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
