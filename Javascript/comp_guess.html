@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <script type="text/javascript">
+        var res;
+        var rand_num = Math.floor(Math.random() * 5) + 1;// Generates a random number between 1 and 5
+        var i = -1;
+        var j = 0;
+        var generatedNumbers = []; // Array to store generated numbers
+        while (i != rand_num) {
+            do {
+                i = Math.floor(Math.random() * 5) + 1;// Generates a random number between 1 and 5
+            } while (generatedNumbers.includes(i)); // Check if i has been generated before
+            generatedNumbers.push(i); // Add i to generatedNumbers array
+            j++;
+        }
+        var msg1 = "The no.s of finger were: " + rand_num;
+        var msg2 = "The computer guessed the number in " + j + " moves";
+        alert(msg1);
+        alert(msg2);
+        document.getElementById('result').innerHTML = "<p>" + msg1 + "</p" + "<br>" + "<p>" + msg2 + "</p";
+    </script>
+</body>
+
+</html>

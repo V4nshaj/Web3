@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <p>How many fingers are you holding up?</p>
+    <select name="" id="my-num">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <Button id="guess">Guess</Button>
+    <script type="text/javascript">
+        document.getElementById('guess').onclick = function () {
+            var val = document.getElementById('my-num').value;
+            comp = -1;
+            j = 0;
+            while (val == comp) {
+                comp = Math.floor(Math.random() * 6);
+                j++;
+            }
+            alert('Got it! It was a ' + val + '. It took me ' + j + ' guesses.')
+        }
+    </script>
+</body>
+
+</html>
