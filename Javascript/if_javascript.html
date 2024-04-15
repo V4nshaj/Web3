@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <p>What is the magic word</p>
+    <p><input type="text" id="takes-input"></p>
+    <button id="Check">Check</button>
+    <script type="text/javascript">
+        document.getElementById('Check').onclick = function () {
+            var itxt = document.getElementById('takes-input').value;
+            if (itxt == 'magic') {
+                alert('Right Word');
+            }
+            else {
+                alert('Wrong Word');
+            }
+        }
+    </script>
+</body>
+
+</html>
