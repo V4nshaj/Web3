@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaction tester</title>
+    <style>
+        .objects {
+            position: absolute;
+            height: 300px;
+            width: 300px;
+            display: none;
+
+
+
+        }
+
+        #circle1 {
+            border-radius: 50%;
+            background-color: yellowgreen;
+        }
+
+        #circle2 {
+            border-radius: 50%;
+            background-color: blueviolet;
+        }
+
+        #circle3 {
+            border-radius: 50%;
+            background-color: deeppink;
+        }
+
+        #square1 {
+            background-color: aqua;
+        }
+
+        #square2 {
+            background-color: orangered;
+        }
+
+        #square3 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Test Your Reaction</h1>
+    <p> Click on the boxes and circles as quickly as you can!</p>
+    <h3 id="time">Your time: </h3>
+    <div id="square1" class="objects"></div>
+    <div id="square2" class="objects"></div>
+    <div id="square3" class="objects"></div>
+    <div id="circle1" class="objects"></div>
+    <div id="circle2" class="objects"></div>
+    <div id="circle3" class="objects"></div>
+    <script type="text/javascript">
+        var timeDisplay = document.getElementById('time');
+        var objects = document.getElementsByClassName('objects');
+        function displayRandomObject() {// Function to randomly display an object and calculate reaction time
+            var startTime = performance.now();// Get the start time before hiding all objects
+            // Select a random object to display initially
+            // Hide all objects
+            for (var i = 0; i < objects.length; i++) {
+                objects[i].style.display = "none";
+            }
+            // Select a random object to display
+            var indexToShow = Math.floor(Math.random() * objects.length);
+            var randomsize = Math.floor(Math.random() * 400) + 100;
+            var randomLeft = Math.floor(Math.random() * (window.innerWidth - randomsize)); // Random left position
+            var randomTop = Math.floor(Math.random() * (window.innerHeight - randomsize)); // Random top position
+            //calculates the maximum possible left position for the object such that it remains fully visible within the viewport.
+            //subtracted from window.innerWidth to ensure that the entire width of the object (which is set to randomsize in your CSS) fits within the viewport
+            objects[indexToShow].style.height = randomsize + 'px';
+            objects[indexToShow].style.width = randomsize + 'px';
+            objects[indexToShow].style.left = randomLeft + 'px';
+            objects[indexToShow].style.top = randomTop + 'px';
+            objects[indexToShow].style.display = "block";
+
+            objects[indexToShow].onclick = function () {
+                var endTime = performance.now();
+                var reactionTime = Math.round((endTime - startTime) / 10) / 100;// Round to two decimal places
+                timeDisplay.textContent = "Your Time: " + reactionTime + " s";
+                displayRandomObject(); // Display a new random object after click
+            }
+        }
+        // Call the function initially to display a random object
+        displayRandomObject();
+    </script>
+</body>
+
+</html>
