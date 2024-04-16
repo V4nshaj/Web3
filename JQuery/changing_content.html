@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style>
+        #circle {
+            height: 200px;
+            width: 200px;
+            margin: 10px 10px;
+            border-radius: 50%;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="circle"></div>
+    <p>This is some text</p>
+    <script type="text/javascript">
+        /*$("#circle").click(function () {//jquery
+            alert($("p").html());
+            alert("Circle says Hi when hovered");
+        });
+        $("#circle").hover(function () {//jquery
+            $("p").html("This text has been changed");
+        });*/
+        // above and down both work saame merge the logic of both event handlers into a single one.
+        $("#circle").on({//.on() allows you to specify multiple event handlers for the same element.
+            click: function () {
+                alert($("p").html());
+                alert("Circle says Hi when hovered");
+            },
+            mouseenter: function () {//when circle is hovered or mouse enters the circle
+                $("p").html("This text has been changed");
+            }
+        });
+    </script>
+</body>
+
+</html>
