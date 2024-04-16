@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style>
+        #hid {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="para">This is a paragraph</p>
+    <button id="button">Fade Out</button>
+    <p id="hid">This is a Hidden</p>
+    <button id="button2">Fade In</button>
+    <p id="fade">This text shows and disapear</p>
+    <button id="button3">Toggle Fade</button>
+    <script type="text/javascript">
+        $('div').click(function () {
+            // $(this).hide();
+            // $(this).fadeOut();//fades effect the disapear
+            $(this).fadeOut("slow", function () {
+                alert("Fadeout has finished");
+            });
+        });
+        $('#button').click(function () {
+            $("#para").fadeOut("slow");
+        });
+        $('#button2').click(function () {
+            $("#hid").fadeIn("slow");
+        });
+        // 3 way to toggle
+        $('#button3').click(function () {
+            $("#fade").fadeToggle();
+        });
+        //the upper one is same
+        // $('#button3').click(function () {
+        //     if ($("#fade").css('display') == 'none') {
+        //         $("#fade").fadeIn("slow");
+        //     }
+        //     else {
+        //         $("#fade").fadeOut("slow");
+
+        //     }
+        // });
+
+        // var textshowing = true;
+        // $('#button3').click(function () {
+        //     if (textshowing) {
+        //         $("#fade").fadeIn("slow", function () {
+
+        //             textshowing = false;
+        //         });
+        //     }
+        //     else {
+        //         $("#fade").fadeOut(function () {
+
+        //             textshowing = true;
+        //         });
+
+        //     }
+        // });
+    </script>
+</body>
+
+</html>
