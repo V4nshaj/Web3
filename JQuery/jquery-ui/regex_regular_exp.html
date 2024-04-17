@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let regex = /is/; //regex is a variable the expression needs to be stored bw // double slash
+        let search = /GreAt/i;//i helps to ignore cases
+        let search1 = /e/g;//g is global which shows the no. instances the string has showed
+        let str = "Regex is gReaT!";
+        let result = str.match(regex);//to check if is present in str
+        alert(result);
+        let res = str.match(search);
+        alert(res);
+        let res1 = str.match(search1);
+        alert(res1);
+    </script>
+</body>
+
+</html>

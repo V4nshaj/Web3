@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style>
+        #circle {
+            height: 200px;
+            width: 200px;
+            margin: 10px 10px;
+            border-radius: 50%;
+            background-color: yellowgreen;
+            /*this show a transition of big circle going small*/
+            /* transition: width 0.5s ease-in-out, height 0.5s ease-in-out, background-color 0.5s ease-in-out; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="circle"></div>
+    <script type="text/javascript">
+        $('#circle').click(function () {
+            $("#circle").animate({//changing width and height animation
+                width: "400px",
+                height: "400px",
+                marginLeft: "100px",
+                marginTop: "100px",
+            }
+                , 2000, function () {
+                    $(this).css("backgroundColor", "red");
+                });
+        });
+    </script>
+</body>
+
+</html>

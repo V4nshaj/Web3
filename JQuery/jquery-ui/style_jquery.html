@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style>
+        #circle {
+            height: 200px;
+            width: 200px;
+            margin: 10px 10px;
+            border-radius: 50%;
+            background-color: yellowgreen;
+            /*this show a transition of big circle going small*/
+            /* transition: width 0.5s ease-in-out, height 0.5s ease-in-out, background-color 0.5s ease-in-out; */
+        }
+
+        .square {
+            height: 200px;
+            width: 200px;
+            margin: 10px 10px;
+
+        }
+
+        #square1 {
+            background-color: orangered;
+        }
+
+        #square2 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="circle"></div>
+    <div id="square1" class="square"></div>
+    <div id="square2" class="square"></div>
+    <script type="text/javascript">
+        // $("#circle").click(function () {
+        //     alert("This is a circle");
+        //     $("#circle").width("100px");
+        //     $("#circle").css("height", "100px");
+        //     $("#circle").css("background-color", "red");
+        //     alert($("#circle").css("background-color"));
+        //     alert($("#circle").css("width"));
+        // });
+        //way to show the last two alerts after change has been made
+
+        $("#circle").click(function () {
+            alert("This is a circle");
+            $("#circle").width("100px");
+            $("#circle").css("height", "100px");
+            $("#circle").css("background-color", "red");
+            setTimeout(function () {
+                alert($("#circle").css("background-color"));
+                alert($("#circle").css("width"));
+            }, 100); // Adjust delay in milliseconds (ms)
+        });
+
+        // $("div").click(function () {
+        //     $(this).css("display", "none");
+        //     alert('You clicked on ' + $(this).attr('id'));
+        // });
+        // $(".square").click(function () {
+        //     $(this).css("display", "none");
+        // });
+        //its a good practice to use .ready so that all the styles and html is loaded
+        $(document).ready(function () {//We use $(document).ready(function() { ... }) to ensure the code executes after the DOM is fully loaded.
+            function hideSquare(squareId) {
+                $("#" + squareId).click(function () {
+                    $(this).css("display", "none");
+                });
+            }
+
+            hideSquare("square1");
+            hideSquare("square2");
+        });
+
+    </script>
+</body>
+
+</html>

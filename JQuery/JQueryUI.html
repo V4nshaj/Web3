@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+    <!-- jQuery UI relies on jQuery functionality. Therefore, you need to include jQuery (jquery.min.js) **before** including jQuery UI (jquery-ui.js).
+- The CSS file (jquery-ui.css) defines styles for the draggable functionality. It should be included **after** both JavaScript files. -->
+</head>
+
+<body>
+    <div id="draggable">
+        Drag me!
+    </div>
+    <div id="draggable1">
+        Drag me! up down
+    </div>
+    <div id="draggable2">
+        Drag me! lef right
+    </div>
+    <div id="draggable3" style="width: 400px; height: 300px; background-color: yellow;">
+        <span>I m stuck in the box</span>
+    </div>
+    <script type="text/javascript">
+        $("#draggable").draggable();
+        $("#draggable1").draggable({ axis: "y" });
+        $('#draggable2').draggable({ axis: 'x' });
+        $('span').draggable({ containment: "parent" });
+    </script>
+</body>
+
+</html>
