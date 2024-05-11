@@ -1,0 +1,17 @@
+In PHP, both GET and POST are methods used to send data to a server. Here's a breakdown of their differences:
+
+GET Method:
+Parameters are passed through the URL.
+Limited amount of data can be sent, typically up to 2048 characters.
+Data is visible in the URL, which can pose security risks, especially when sensitive information like passwords is involved.
+GET requests can be bookmarked and cached.
+It's suitable for requests where data is not sensitive and the amount of data to be sent is small, like fetching data from a server
+
+POST Method:
+Parameters are sent in the HTTP request body, not visible in the URL.
+Larger amount of data can be sent compared to GET.
+Data is not visible in the URL, providing better security.
+POST requests are not cached, and therefore can't be bookmarked.
+It's suitable for requests where sensitive data needs to be sent, like submitting forms with passwords or credit card details.
+
+In summary, use GET when you're retrieving data from the server, and use POST when you're sending sensitive information or large amounts of data to the server.

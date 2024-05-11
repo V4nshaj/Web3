@@ -3,9 +3,9 @@
 $emailTo = "barnwalaryan33@gmail.com";
 $subject = "I hope it works!";
 $body = "I think you are great!";
-$header = "admin@vanshajbarnwal.com";
+$headers = "From: admin@vanshajbarnwal.com";
 
-if(mail($emailTo, $subject, $body, $header)){
+if(mail($emailTo, $subject, $body, $headers)){
     echo "The email has been successfully sent";
 }
 else{
