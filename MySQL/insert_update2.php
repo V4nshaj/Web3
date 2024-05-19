@@ -12,6 +12,7 @@
 
     //$queryUpdate = "UPDATE users SET email = 'someone123@somewebsite.co.uk' WHERE id = '2' LIMIT 1";
     $queryUpdate = "UPDATE users SET password = 'bubbles1776' WHERE email = 'codestarsjpbaugh@gmail.com' LIMIT 1";
+    //LIMIT above sets limit that only one instance of email is changed if there are same same email
 
     mysqli_query($link, $queryUpdate);
 
