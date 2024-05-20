@@ -1,9 +1,7 @@
 <?php
 
     if(array_key_exists('email', $_POST) OR array_key_exists('password', $_POST)) {
-        $link = mysqli_connect("shareddb-q.hosting.stackcp.net", 
-        "users_db-3131371973", 
-        "snuggles123", "users_db-3131371973");
+        $link = mysqli_connect("sdb-67.hosting.stackcp.net", "users_db-35303437b6cf", "phone3333", "users_db-35303437b6cf");
 
         if(mysqli_connect_error()) {
             die("There was an error connecting to the database.");
@@ -44,9 +42,9 @@
 
 ?>
 
-<form method = "post">
+<form method="post">
     <input name="email" type="text" placeholder="Email address">
     <input name="password" type="password" placeholder="Password">
 
-    <input type="submit" value= "Sign up!">
+    <input type="submit" value="Sign up!">
 </form>
