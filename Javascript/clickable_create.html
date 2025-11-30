@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <button onclick="create()">
+        Click Here!
+    </button>
+    <script>
+        function create() {
+
+            let gag = document.createElement('tutuorial');
+            gag.textContent = 'Hello World!';
+            gag.setAttribute('class', 'highlight');
+            document.body.appendChild(gag);
+        }
+    </script>
+</body>
+
+</html>
